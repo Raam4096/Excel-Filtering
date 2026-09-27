@@ -55,6 +55,7 @@ if sheet == "Failure Details":
     def pick_col(label, key):
         preferred = default_map[key]
         options = cols
+        print("test")
         idx = options.index(preferred) if preferred in options else 0
         return st.selectbox(label, options, index=idx)
 

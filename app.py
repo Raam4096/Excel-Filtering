@@ -28,6 +28,7 @@ def run_and_show(sql: str):
         out = con.execute(sql).df()
         st.code(sql, language="sql")
         st.success(f"Returned {len(out)} rows")
+        print("hello")
         st.dataframe(out, use_container_width=True)
 
         csv = out.to_csv(index=False).encode("utf-8")
